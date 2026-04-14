@@ -24,7 +24,7 @@ int main () {
 
 
 	int id = 0;
-	char choice;
+	string choice;
 	
 	bool logged_in = false;
 	while(true) {
@@ -40,18 +40,21 @@ int main () {
 	cout << "Exit (E)" << endl;
 	cout << "Choose: ";
 	cin >> choice;
-	if (choice == 'S') {
+	if (choice == "S") {
 		sign_up(users, id);
 	}
-	else if (choice == 'L') {
+	else if (choice == "L") {
 		login(users, logged_in);
 	}
-	else if (choice == 'O') {
+	else if (choice == "O") {
 		logged_in = false;
+		cout << "You are logged out" << endl;
 	}
-	else if (choice == 'E') {
+	else if (choice == "E") {
 		return 0;
 	}
+	else {
+		cout << "Invalid choice" << endl;}
 	}
 	return 0;
 }
