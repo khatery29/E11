@@ -3,4 +3,4 @@
 
 using namespace std;
 
-void check_email(string email);
+bool check_email(string email);
